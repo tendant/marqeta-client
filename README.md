@@ -22,6 +22,12 @@ or, with more options
 openapi-generator generate -g go -i CoreAPI.yaml -o marqeta-coreapi-go-client-v3-0-11 --additional-properties=packageName=mqt-core-go,withGoMod=false
 ```
 
+or, using a config.json file
+
+```shell
+openapi-generator generate -g go -i yaml/CoreAPI.yaml -o coreapi -c coreapi/config.json
+```
+
 ### openapi-generator-cli
 
 Link: https://github.com/OpenAPITools/openapi-generator-cli#installation

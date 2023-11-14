@@ -3,12 +3,6 @@ module github.com/tendant/marqeta-client
 go 1.20
 
 require (
-	github.com/stretchr/testify v1.8.4
+	github.com/tendant/marqeta-client/coreapi v0.0.0-20231110233841-9814b84643a8
 	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa
-)
-
-require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

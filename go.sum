@@ -1,4 +1,2 @@
-github.com/tendant/marqeta-client/coreapi v0.0.0-20231110233841-9814b84643a8 h1:VS4v1WATOOiN/BqoAgFCynpqN9vFXf8cW9ThGFV2d6g=
-github.com/tendant/marqeta-client/coreapi v0.0.0-20231110233841-9814b84643a8/go.mod h1:dSXN5Gxdd+5EOphrzFNu5ZW2kyucRQr7NEj2qCWxQBY=
 golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa h1:FRnLl4eNAQl8hwxVVC17teOw8kdjVDVAiFMtgUdTSRQ=
 golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa/go.mod h1:zk2irFbV9DP96SEBUUAy67IdHUaZuSnrz1n472HUCLE=

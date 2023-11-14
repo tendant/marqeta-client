@@ -1,6 +1,6 @@
 {
     "enumClassPrefix": true,
-    "packageName": "marqeta_coreapi_client",
+    "packageName": "coreapi",
     "gitHost": "github.com",
     "gitUserId": "tendant",
     "gitRepoId": "marqeta-client/coreapi"

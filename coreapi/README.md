@@ -1,4 +1,4 @@
-# Go API client for marqeta_coreapi_client
+# Go API client for coreapi
 
 Marqeta's Core API endpoints, conveniently annotated to enable code generation (including SDKs), test cases, and documentation. Currently in beta.
 
@@ -21,7 +21,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import marqeta_coreapi_client "github.com/tendant/marqeta-client/coreapi"
+import coreapi "github.com/tendant/marqeta-client/coreapi"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -39,7 +39,7 @@ Default configuration comes with `Servers` field that contains server objects as
 For using other server than the one defined on index 0 set context value `sw.ContextServerIndex` of type `int`.
 
 ```golang
-ctx := context.WithValue(context.Background(), marqeta_coreapi_client.ContextServerIndex, 1)
+ctx := context.WithValue(context.Background(), coreapi.ContextServerIndex, 1)
 ```
 
 ### Templated Server URL
@@ -47,7 +47,7 @@ ctx := context.WithValue(context.Background(), marqeta_coreapi_client.ContextSer
 Templated server URL is formatted using default variables from configuration or from context value `sw.ContextServerVariables` of type `map[string]string`.
 
 ```golang
-ctx := context.WithValue(context.Background(), marqeta_coreapi_client.ContextServerVariables, map[string]string{
+ctx := context.WithValue(context.Background(), coreapi.ContextServerVariables, map[string]string{
 	"basePath": "v2",
 })
 ```
@@ -61,10 +61,10 @@ An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
 Similar rules for overriding default operation server index and variables applies by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
 
 ```golang
-ctx := context.WithValue(context.Background(), marqeta_coreapi_client.ContextOperationServerIndices, map[string]int{
+ctx := context.WithValue(context.Background(), coreapi.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
-ctx = context.WithValue(context.Background(), marqeta_coreapi_client.ContextOperationServerVariables, map[string]map[string]string{
+ctx = context.WithValue(context.Background(), coreapi.ContextOperationServerVariables, map[string]map[string]string{
 	"{classname}Service.{nickname}": {
 		"port": "8443",
 	},

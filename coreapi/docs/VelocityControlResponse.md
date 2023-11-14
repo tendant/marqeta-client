@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Description of how the velocity control restricts spending. For example, \&quot;Max spend of $500 per day\&quot; or \&quot;Max spend of $5000 per month for non-exempt employees\&quot;. | [optional] 
 **Token** | Pointer to **string** | Unique identifier of the velocity control. | [optional] 
 **UsageLimit** | Pointer to **int32** | Maximum number of times a card can be used within the time period defined by the &#x60;velocity_window&#x60; field. | [optional] 
-**VelocityWindow** | **string** | Defines the time period to which the &#x60;amount_limit&#x60; and &#x60;usage_limit&#x60; fields apply:  * *DAY* – one day; days begin at 00:00:00 UTC. * *WEEK* – one week; weeks begin Sundays at 00:00:00 UTC. * *MONTH* – one month; months begin on the first day of month at 00:00:00 UTC. * *LIFETIME* – forever; time period never expires. * *TRANSACTION* – a single transaction. | 
+**VelocityWindow** | **string** | Defines the time period to which the &#x60;amount_limit&#x60; and &#x60;usage_limit&#x60; fields apply:  * *DAY*  one day; days begin at 00:00:00 UTC. * *WEEK*  one week; weeks begin Sundays at 00:00:00 UTC. * *MONTH*  one month; months begin on the first day of month at 00:00:00 UTC. * *LIFETIME*  forever; time period never expires. * *TRANSACTION*  a single transaction. | 
 
 ## Methods
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &SelectiveAuth{}
 
 // SelectiveAuth Contains information about authorization decisions.
 type SelectiveAuth struct {
-	// Determines what type of merchant information is required for a match (authorization). Not relevant if `enable_regex_search_chain = false`.  * *0* – Requires exact match on card acceptor name and postal code to existing entry in Marqeta Merchant database (most restrictive). * *1* – Partial match on card acceptor name (least restrictive). * *2* – Partial match on card acceptor name; exact match on card acceptor city. * *3* – Partial match on card acceptor name; exact match on card acceptor postal code. * *4* – Partial match on card acceptor name; exact match on street address 1 and postal code.
+	// Determines what type of merchant information is required for a match (authorization). Not relevant if `enable_regex_search_chain = false`.  * *0*  Requires exact match on card acceptor name and postal code to existing entry in Marqeta Merchant database (most restrictive). * *1*  Partial match on card acceptor name (least restrictive). * *2*  Partial match on card acceptor name; exact match on card acceptor city. * *3*  Partial match on card acceptor name; exact match on card acceptor postal code. * *4*  Partial match on card acceptor name; exact match on street address 1 and postal code.
 	DmdLocationSensitivity *int32 `json:"dmd_location_sensitivity,omitempty"`
 	// Set to `true` to perform regular expression checking on the description received in the authorization.
 	EnableRegexSearchChain *bool `json:"enable_regex_search_chain,omitempty"`

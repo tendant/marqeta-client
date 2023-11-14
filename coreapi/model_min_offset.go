@@ -22,7 +22,7 @@ var _ MappedNullable = &MinOffset{}
 type MinOffset struct {
 	// Specifies the time unit of the `value` field.
 	Unit *string `json:"unit,omitempty"`
-	// Specifies the number of time units (as defined by the `unit` field) for which cards of this card product type are valid. Cards expire `value` x `unit` after the date of issue.  This number is rounded as follows:  * *YEARS* – Rounds up to the last second of the last day of the month of expiration. For example, if the issue date is 1 Jan 2021 and `value = 1`, the cards expire on the last day of Jan 2022.  * *MONTHS* – Rounds up to the last second of the last day of the month of expiration. For example, if the issue date is 1 May 2022 and `value = 1`, the cards expire on the last day of June 2022.  * *DAYS* – Rounds up to the last second of the day of expiration.  * *HOURS*, *MINUTES*, *SECONDS* – No rounding.
+	// Specifies the number of time units (as defined by the `unit` field) for which cards of this card product type are valid. Cards expire `value` x `unit` after the date of issue.  This number is rounded as follows:  * *YEARS*  Rounds up to the last second of the last day of the month of expiration. For example, if the issue date is 1 Jan 2021 and `value = 1`, the cards expire on the last day of Jan 2022.  * *MONTHS*  Rounds up to the last second of the last day of the month of expiration. For example, if the issue date is 1 May 2022 and `value = 1`, the cards expire on the last day of June 2022.  * *DAYS*  Rounds up to the last second of the day of expiration.  * *HOURS*, *MINUTES*, *SECONDS*  No rounding.
 	Value *int32 `json:"value,omitempty"`
 }
 

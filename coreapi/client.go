@@ -50,65 +50,15 @@ type APIClient struct {
 
 	// API Services
 
-	AcceptedCountriesAPI *AcceptedCountriesAPIService
-
-	AccountAPI *AccountAPIService
-
-	AccountCardsAPI *AccountCardsAPIService
-
-	AccountDocumentsAPI *AccountDocumentsAPIService
-
-	AccountHolderFundingSourcesAPI *AccountHolderFundingSourcesAPIService
-
-	AccountHolderGroupsAPI *AccountHolderGroupsAPIService
-
-	AccountRewardsAPI *AccountRewardsAPIService
-
-	AccountTransitionsAPI *AccountTransitionsAPIService
-
-	AddressesAPI *AddressesAPIService
-
-	AdjustmentsAPI *AdjustmentsAPIService
-
-	ApplicationsAPI *ApplicationsAPIService
-
-	AuthorizationControlsAPI *AuthorizationControlsAPIService
-
-	AutoReloadAPI *AutoReloadAPIService
-
-	BalanceRefundsAPI *BalanceRefundsAPIService
-
-	BalancesAPI *BalancesAPIService
-
-	BulkCardOrdersAPI *BulkCardOrdersAPIService
-
-	BundlesBetaAPI *BundlesBetaAPIService
-
 	BusinessTransitionsAPI *BusinessTransitionsAPIService
 
 	BusinessesAPI *BusinessesAPIService
-
-	CardProductsAPI *CardProductsAPIService
 
 	CardTransitionsAPI *CardTransitionsAPIService
 
 	CardsAPI *CardsAPIService
 
-	CommandoModeAPI *CommandoModeAPIService
-
-	CreditAccountsAPI *CreditAccountsAPIService
-
-	CreditDisputesAPI *CreditDisputesAPIService
-
-	CreditProductsAPI *CreditProductsAPIService
-
-	DelinquencyAPI *DelinquencyAPIService
-
 	DigitalWalletsManagementAPI *DigitalWalletsManagementAPIService
-
-	DirectDepositAccountsAPI *DirectDepositAccountsAPIService
-
-	DirectDepositsAPI *DirectDepositsAPIService
 
 	FeeChargesAPI *FeeChargesAPIService
 
@@ -116,67 +66,15 @@ type APIClient struct {
 
 	FeesAPI *FeesAPIService
 
-	FundingViaACHBetaAPI *FundingViaACHBetaAPIService
-
-	GPAOrdersAPI *GPAOrdersAPIService
-
-	JournalEntriesAPI *JournalEntriesAPIService
-
-	KYCVerificationAPI *KYCVerificationAPIService
-
-	LedgerEntriesAPI *LedgerEntriesAPIService
-
-	MCCGroupsAPI *MCCGroupsAPIService
-
-	MerchantGroupsAPI *MerchantGroupsAPIService
-
-	PINsAPI *PINsAPIService
-
-	PaymentSchedulesAPI *PaymentSchedulesAPIService
-
-	PaymentSourcesAPI *PaymentSourcesAPIService
-
-	PaymentsAPI *PaymentsAPIService
-
-	PeerTransfersAPI *PeerTransfersAPIService
-
 	PingAPI *PingAPIService
 
-	PoliciesBetaAPI *PoliciesBetaAPIService
-
-	ProgramFundingSourcesAPI *ProgramFundingSourcesAPIService
-
-	ProgramGatewayFundingSourcesAPI *ProgramGatewayFundingSourcesAPIService
-
-	ProgramReserveAPI *ProgramReserveAPIService
-
-	ProgramTransfersAPI *ProgramTransfersAPIService
-
-	PushToCardAPI *PushToCardAPIService
-
-	RealTimeFeeGroupsAPI *RealTimeFeeGroupsAPIService
-
-	RedemptionsAPI *RedemptionsAPIService
-
-	RewardProgramsAPI *RewardProgramsAPIService
-
-	RewardProgramsBetaAPI *RewardProgramsBetaAPIService
-
-	RewardRedemptionsBetaAPI *RewardRedemptionsBetaAPIService
-
 	SimulationsCardTransactionsAPI *SimulationsCardTransactionsAPIService
-
-	SimulationsDirectDepositsAPI *SimulationsDirectDepositsAPIService
-
-	StatementsAPI *StatementsAPIService
 
 	TransactionsAPI *TransactionsAPIService
 
 	UserTransitionsAPI *UserTransitionsAPIService
 
 	UsersAPI *UsersAPIService
-
-	VelocityControlsAPI *VelocityControlsAPIService
 
 	WebhooksAPI *WebhooksAPIService
 }
@@ -197,70 +95,19 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.AcceptedCountriesAPI = (*AcceptedCountriesAPIService)(&c.common)
-	c.AccountAPI = (*AccountAPIService)(&c.common)
-	c.AccountCardsAPI = (*AccountCardsAPIService)(&c.common)
-	c.AccountDocumentsAPI = (*AccountDocumentsAPIService)(&c.common)
-	c.AccountHolderFundingSourcesAPI = (*AccountHolderFundingSourcesAPIService)(&c.common)
-	c.AccountHolderGroupsAPI = (*AccountHolderGroupsAPIService)(&c.common)
-	c.AccountRewardsAPI = (*AccountRewardsAPIService)(&c.common)
-	c.AccountTransitionsAPI = (*AccountTransitionsAPIService)(&c.common)
-	c.AddressesAPI = (*AddressesAPIService)(&c.common)
-	c.AdjustmentsAPI = (*AdjustmentsAPIService)(&c.common)
-	c.ApplicationsAPI = (*ApplicationsAPIService)(&c.common)
-	c.AuthorizationControlsAPI = (*AuthorizationControlsAPIService)(&c.common)
-	c.AutoReloadAPI = (*AutoReloadAPIService)(&c.common)
-	c.BalanceRefundsAPI = (*BalanceRefundsAPIService)(&c.common)
-	c.BalancesAPI = (*BalancesAPIService)(&c.common)
-	c.BulkCardOrdersAPI = (*BulkCardOrdersAPIService)(&c.common)
-	c.BundlesBetaAPI = (*BundlesBetaAPIService)(&c.common)
 	c.BusinessTransitionsAPI = (*BusinessTransitionsAPIService)(&c.common)
 	c.BusinessesAPI = (*BusinessesAPIService)(&c.common)
-	c.CardProductsAPI = (*CardProductsAPIService)(&c.common)
 	c.CardTransitionsAPI = (*CardTransitionsAPIService)(&c.common)
 	c.CardsAPI = (*CardsAPIService)(&c.common)
-	c.CommandoModeAPI = (*CommandoModeAPIService)(&c.common)
-	c.CreditAccountsAPI = (*CreditAccountsAPIService)(&c.common)
-	c.CreditDisputesAPI = (*CreditDisputesAPIService)(&c.common)
-	c.CreditProductsAPI = (*CreditProductsAPIService)(&c.common)
-	c.DelinquencyAPI = (*DelinquencyAPIService)(&c.common)
 	c.DigitalWalletsManagementAPI = (*DigitalWalletsManagementAPIService)(&c.common)
-	c.DirectDepositAccountsAPI = (*DirectDepositAccountsAPIService)(&c.common)
-	c.DirectDepositsAPI = (*DirectDepositsAPIService)(&c.common)
 	c.FeeChargesAPI = (*FeeChargesAPIService)(&c.common)
 	c.FeeRefundsAPI = (*FeeRefundsAPIService)(&c.common)
 	c.FeesAPI = (*FeesAPIService)(&c.common)
-	c.FundingViaACHBetaAPI = (*FundingViaACHBetaAPIService)(&c.common)
-	c.GPAOrdersAPI = (*GPAOrdersAPIService)(&c.common)
-	c.JournalEntriesAPI = (*JournalEntriesAPIService)(&c.common)
-	c.KYCVerificationAPI = (*KYCVerificationAPIService)(&c.common)
-	c.LedgerEntriesAPI = (*LedgerEntriesAPIService)(&c.common)
-	c.MCCGroupsAPI = (*MCCGroupsAPIService)(&c.common)
-	c.MerchantGroupsAPI = (*MerchantGroupsAPIService)(&c.common)
-	c.PINsAPI = (*PINsAPIService)(&c.common)
-	c.PaymentSchedulesAPI = (*PaymentSchedulesAPIService)(&c.common)
-	c.PaymentSourcesAPI = (*PaymentSourcesAPIService)(&c.common)
-	c.PaymentsAPI = (*PaymentsAPIService)(&c.common)
-	c.PeerTransfersAPI = (*PeerTransfersAPIService)(&c.common)
 	c.PingAPI = (*PingAPIService)(&c.common)
-	c.PoliciesBetaAPI = (*PoliciesBetaAPIService)(&c.common)
-	c.ProgramFundingSourcesAPI = (*ProgramFundingSourcesAPIService)(&c.common)
-	c.ProgramGatewayFundingSourcesAPI = (*ProgramGatewayFundingSourcesAPIService)(&c.common)
-	c.ProgramReserveAPI = (*ProgramReserveAPIService)(&c.common)
-	c.ProgramTransfersAPI = (*ProgramTransfersAPIService)(&c.common)
-	c.PushToCardAPI = (*PushToCardAPIService)(&c.common)
-	c.RealTimeFeeGroupsAPI = (*RealTimeFeeGroupsAPIService)(&c.common)
-	c.RedemptionsAPI = (*RedemptionsAPIService)(&c.common)
-	c.RewardProgramsAPI = (*RewardProgramsAPIService)(&c.common)
-	c.RewardProgramsBetaAPI = (*RewardProgramsBetaAPIService)(&c.common)
-	c.RewardRedemptionsBetaAPI = (*RewardRedemptionsBetaAPIService)(&c.common)
 	c.SimulationsCardTransactionsAPI = (*SimulationsCardTransactionsAPIService)(&c.common)
-	c.SimulationsDirectDepositsAPI = (*SimulationsDirectDepositsAPIService)(&c.common)
-	c.StatementsAPI = (*StatementsAPIService)(&c.common)
 	c.TransactionsAPI = (*TransactionsAPIService)(&c.common)
 	c.UserTransitionsAPI = (*UserTransitionsAPIService)(&c.common)
 	c.UsersAPI = (*UsersAPIService)(&c.common)
-	c.VelocityControlsAPI = (*VelocityControlsAPIService)(&c.common)
 	c.WebhooksAPI = (*WebhooksAPIService)(&c.common)
 
 	return c

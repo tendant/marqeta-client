@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **AutoReload** | Pointer to [**AutoReloadModel**](AutoReloadModel.md) |  | [optional] 
 **BankTransferToken** | Pointer to **string** |  | [optional] 
 **BatchNumber** | Pointer to **string** | The batch number of the transaction. | [optional] 
-**Billpay** | Pointer to [**BillPayResponse**](BillPayResponse.md) |  | [optional] 
 **Business** | Pointer to [**BusinessMetadata**](BusinessMetadata.md) |  | [optional] 
 **BusinessToken** | Pointer to **string** | Unique identifier of the business that owns the account that funded the transaction. | [optional] 
 **Card** | Pointer to [**CardResponse**](CardResponse.md) |  | [optional] 
@@ -38,7 +37,6 @@ Name | Type | Description | Notes
 **CurrencyConversion** | Pointer to [**CurrencyConversion**](CurrencyConversion.md) |  | [optional] 
 **DeferredSettlementDays** | Pointer to **string** |  | [optional] 
 **DigitalWalletToken** | Pointer to [**DigitalWalletToken**](DigitalWalletToken.md) |  | [optional] 
-**DirectDeposit** | Pointer to [**DepositDepositResponse**](DepositDepositResponse.md) |  | [optional] 
 **Dispute** | Pointer to [**DisputeModel**](DisputeModel.md) |  | [optional] 
 **Duration** | Pointer to **int32** | Duration of the transaction on Marqeta&#39;s servers, in milliseconds. | [optional] 
 **EnhancedDataToken** | Pointer to **string** | The enhanced commercial card data token for the transaction. | [optional] 
@@ -84,7 +82,7 @@ Name | Type | Description | Notes
 **StandinReason** | Pointer to **string** | Indicates why the card network handled a transaction requiring stand-in processing. | [optional] 
 **State** | **string** | Current state of the transaction. For more information about the &#x60;state&#x60; field, see &lt;&lt;/developer-guides/about-transactions#_the_transaction_lifecycle, The transaction lifecycle&gt;&gt;. | 
 **Store** | Pointer to [**StoreResponseModel**](StoreResponseModel.md) |  | [optional] 
-**Subnetwork** | Pointer to **string** | Indicates which subnetwork was used to complete the transaction. Possible values include the following:  * *VISANET* – Used for VisaNet signature-based transactions. * *VISANETDEBIT* – Used for VisaNet Debit PIN-based transaction. * *VISAINTERLINK* – Used for Visa Interlink PIN-based transactions. * *VISAPLUS* – Used for ATM withdrawals on Visa. * *MAESTRO* – Used for PIN-based transactions on Mastercard. * *CIRRUS* – Used for ATM withdrawals on Mastercard. * *MASTERCARDDEBIT* – Used for signature-based transactions on Mastercard. * *GATEWAY_JIT* – Used for Gateway JIT Funding transactions. * *MANAGED_JIT* – Used for Managed JIT Funding transactions or for transactions that occur while Commando Mode is enabled. | [optional] 
+**Subnetwork** | Pointer to **string** | Indicates which subnetwork was used to complete the transaction. Possible values include the following:  * *VISANET*  Used for VisaNet signature-based transactions. * *VISANETDEBIT*  Used for VisaNet Debit PIN-based transaction. * *VISAINTERLINK*  Used for Visa Interlink PIN-based transactions. * *VISAPLUS*  Used for ATM withdrawals on Visa. * *MAESTRO*  Used for PIN-based transactions on Mastercard. * *CIRRUS*  Used for ATM withdrawals on Mastercard. * *MASTERCARDDEBIT*  Used for signature-based transactions on Mastercard. * *GATEWAY_JIT*  Used for Gateway JIT Funding transactions. * *MANAGED_JIT*  Used for Managed JIT Funding transactions or for transactions that occur while Commando Mode is enabled. | [optional] 
 **Token** | **string** | Unique identifier of the transaction, formatted as a UUID.  *NOTE:* For subsequent related transactions, this token value appears as the &#x60;preceding_related_transaction_token&#x60;. | [readonly] 
 **TransactionAttributes** | Pointer to **map[string]string** | Additional transaction attributes. | [optional] 
 **TransactionMetadata** | Pointer to [**TransactionMetadata**](TransactionMetadata.md) |  | [optional] 
@@ -501,31 +499,6 @@ SetBatchNumber sets BatchNumber field to given value.
 `func (o *TransactionModel) HasBatchNumber() bool`
 
 HasBatchNumber returns a boolean if a field has been set.
-
-### GetBillpay
-
-`func (o *TransactionModel) GetBillpay() BillPayResponse`
-
-GetBillpay returns the Billpay field if non-nil, zero value otherwise.
-
-### GetBillpayOk
-
-`func (o *TransactionModel) GetBillpayOk() (*BillPayResponse, bool)`
-
-GetBillpayOk returns a tuple with the Billpay field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBillpay
-
-`func (o *TransactionModel) SetBillpay(v BillPayResponse)`
-
-SetBillpay sets Billpay field to given value.
-
-### HasBillpay
-
-`func (o *TransactionModel) HasBillpay() bool`
-
-HasBillpay returns a boolean if a field has been set.
 
 ### GetBusiness
 
@@ -951,31 +924,6 @@ SetDigitalWalletToken sets DigitalWalletToken field to given value.
 `func (o *TransactionModel) HasDigitalWalletToken() bool`
 
 HasDigitalWalletToken returns a boolean if a field has been set.
-
-### GetDirectDeposit
-
-`func (o *TransactionModel) GetDirectDeposit() DepositDepositResponse`
-
-GetDirectDeposit returns the DirectDeposit field if non-nil, zero value otherwise.
-
-### GetDirectDepositOk
-
-`func (o *TransactionModel) GetDirectDepositOk() (*DepositDepositResponse, bool)`
-
-GetDirectDepositOk returns a tuple with the DirectDeposit field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDirectDeposit
-
-`func (o *TransactionModel) SetDirectDeposit(v DepositDepositResponse)`
-
-SetDirectDeposit sets DirectDeposit field to given value.
-
-### HasDirectDeposit
-
-`func (o *TransactionModel) HasDirectDeposit() bool`
-
-HasDirectDeposit returns a boolean if a field has been set.
 
 ### GetDispute
 

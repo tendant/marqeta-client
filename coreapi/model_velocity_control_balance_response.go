@@ -48,7 +48,7 @@ type VelocityControlBalanceResponse struct {
 	Token *string `json:"token,omitempty"`
 	// Maximum number of times a card can be used within the time period defined by the `velocity_window` field.
 	UsageLimit *int32 `json:"usage_limit,omitempty"`
-	// Defines the time period to which the `amount_limit` and `usage_limit` fields apply:  * *DAY* – one day; days begin at 00:00:00 UTC. * *WEEK* – one week; weeks begin Sundays at 00:00:00 UTC. * *MONTH* – one month; months begin on the first day of month at 00:00:00 UTC. * *LIFETIME* – forever; time period never expires. * *TRANSACTION* – a single transaction.
+	// Defines the time period to which the `amount_limit` and `usage_limit` fields apply:  * *DAY*  one day; days begin at 00:00:00 UTC. * *WEEK*  one week; weeks begin Sundays at 00:00:00 UTC. * *MONTH*  one month; months begin on the first day of month at 00:00:00 UTC. * *LIFETIME*  forever; time period never expires. * *TRANSACTION*  a single transaction.
 	VelocityWindow string `json:"velocity_window"`
 }
 

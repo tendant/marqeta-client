@@ -44,7 +44,6 @@ type TransactionModel struct {
 	BankTransferToken *string `json:"bank_transfer_token,omitempty"`
 	// The batch number of the transaction.
 	BatchNumber *string `json:"batch_number,omitempty"`
-	Billpay *BillPayResponse `json:"billpay,omitempty"`
 	Business *BusinessMetadata `json:"business,omitempty"`
 	// Unique identifier of the business that owns the account that funded the transaction.
 	BusinessToken *string `json:"business_token,omitempty"`
@@ -68,7 +67,6 @@ type TransactionModel struct {
 	CurrencyConversion *CurrencyConversion `json:"currency_conversion,omitempty"`
 	DeferredSettlementDays *string `json:"deferred_settlement_days,omitempty"`
 	DigitalWalletToken *DigitalWalletToken `json:"digital_wallet_token,omitempty"`
-	DirectDeposit *DepositDepositResponse `json:"direct_deposit,omitempty"`
 	Dispute *DisputeModel `json:"dispute,omitempty"`
 	// Duration of the transaction on Marqeta's servers, in milliseconds.
 	Duration *int32 `json:"duration,omitempty"`
@@ -137,7 +135,7 @@ type TransactionModel struct {
 	// Current state of the transaction. For more information about the `state` field, see <</developer-guides/about-transactions#_the_transaction_lifecycle, The transaction lifecycle>>.
 	State string `json:"state"`
 	Store *StoreResponseModel `json:"store,omitempty"`
-	// Indicates which subnetwork was used to complete the transaction. Possible values include the following:  * *VISANET* – Used for VisaNet signature-based transactions. * *VISANETDEBIT* – Used for VisaNet Debit PIN-based transaction. * *VISAINTERLINK* – Used for Visa Interlink PIN-based transactions. * *VISAPLUS* – Used for ATM withdrawals on Visa. * *MAESTRO* – Used for PIN-based transactions on Mastercard. * *CIRRUS* – Used for ATM withdrawals on Mastercard. * *MASTERCARDDEBIT* – Used for signature-based transactions on Mastercard. * *GATEWAY_JIT* – Used for Gateway JIT Funding transactions. * *MANAGED_JIT* – Used for Managed JIT Funding transactions or for transactions that occur while Commando Mode is enabled.
+	// Indicates which subnetwork was used to complete the transaction. Possible values include the following:  * *VISANET*  Used for VisaNet signature-based transactions. * *VISANETDEBIT*  Used for VisaNet Debit PIN-based transaction. * *VISAINTERLINK*  Used for Visa Interlink PIN-based transactions. * *VISAPLUS*  Used for ATM withdrawals on Visa. * *MAESTRO*  Used for PIN-based transactions on Mastercard. * *CIRRUS*  Used for ATM withdrawals on Mastercard. * *MASTERCARDDEBIT*  Used for signature-based transactions on Mastercard. * *GATEWAY_JIT*  Used for Gateway JIT Funding transactions. * *MANAGED_JIT*  Used for Managed JIT Funding transactions or for transactions that occur while Commando Mode is enabled.
 	Subnetwork *string `json:"subnetwork,omitempty"`
 	// Unique identifier of the transaction, formatted as a UUID.  *NOTE:* For subsequent related transactions, this token value appears as the `preceding_related_transaction_token`.
 	Token string `json:"token"`
@@ -673,38 +671,6 @@ func (o *TransactionModel) HasBatchNumber() bool {
 // SetBatchNumber gets a reference to the given string and assigns it to the BatchNumber field.
 func (o *TransactionModel) SetBatchNumber(v string) {
 	o.BatchNumber = &v
-}
-
-// GetBillpay returns the Billpay field value if set, zero value otherwise.
-func (o *TransactionModel) GetBillpay() BillPayResponse {
-	if o == nil || IsNil(o.Billpay) {
-		var ret BillPayResponse
-		return ret
-	}
-	return *o.Billpay
-}
-
-// GetBillpayOk returns a tuple with the Billpay field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *TransactionModel) GetBillpayOk() (*BillPayResponse, bool) {
-	if o == nil || IsNil(o.Billpay) {
-		return nil, false
-	}
-	return o.Billpay, true
-}
-
-// HasBillpay returns a boolean if a field has been set.
-func (o *TransactionModel) HasBillpay() bool {
-	if o != nil && !IsNil(o.Billpay) {
-		return true
-	}
-
-	return false
-}
-
-// SetBillpay gets a reference to the given BillPayResponse and assigns it to the Billpay field.
-func (o *TransactionModel) SetBillpay(v BillPayResponse) {
-	o.Billpay = &v
 }
 
 // GetBusiness returns the Business field value if set, zero value otherwise.
@@ -1249,38 +1215,6 @@ func (o *TransactionModel) HasDigitalWalletToken() bool {
 // SetDigitalWalletToken gets a reference to the given DigitalWalletToken and assigns it to the DigitalWalletToken field.
 func (o *TransactionModel) SetDigitalWalletToken(v DigitalWalletToken) {
 	o.DigitalWalletToken = &v
-}
-
-// GetDirectDeposit returns the DirectDeposit field value if set, zero value otherwise.
-func (o *TransactionModel) GetDirectDeposit() DepositDepositResponse {
-	if o == nil || IsNil(o.DirectDeposit) {
-		var ret DepositDepositResponse
-		return ret
-	}
-	return *o.DirectDeposit
-}
-
-// GetDirectDepositOk returns a tuple with the DirectDeposit field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *TransactionModel) GetDirectDepositOk() (*DepositDepositResponse, bool) {
-	if o == nil || IsNil(o.DirectDeposit) {
-		return nil, false
-	}
-	return o.DirectDeposit, true
-}
-
-// HasDirectDeposit returns a boolean if a field has been set.
-func (o *TransactionModel) HasDirectDeposit() bool {
-	if o != nil && !IsNil(o.DirectDeposit) {
-		return true
-	}
-
-	return false
-}
-
-// SetDirectDeposit gets a reference to the given DepositDepositResponse and assigns it to the DirectDeposit field.
-func (o *TransactionModel) SetDirectDeposit(v DepositDepositResponse) {
-	o.DirectDeposit = &v
 }
 
 // GetDispute returns the Dispute field value if set, zero value otherwise.
@@ -3009,9 +2943,6 @@ func (o TransactionModel) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.BatchNumber) {
 		toSerialize["batch_number"] = o.BatchNumber
 	}
-	if !IsNil(o.Billpay) {
-		toSerialize["billpay"] = o.Billpay
-	}
 	if !IsNil(o.Business) {
 		toSerialize["business"] = o.Business
 	}
@@ -3062,9 +2993,6 @@ func (o TransactionModel) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.DigitalWalletToken) {
 		toSerialize["digital_wallet_token"] = o.DigitalWalletToken
-	}
-	if !IsNil(o.DirectDeposit) {
-		toSerialize["direct_deposit"] = o.DirectDeposit
 	}
 	if !IsNil(o.Dispute) {
 		toSerialize["dispute"] = o.Dispute

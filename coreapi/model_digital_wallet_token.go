@@ -29,7 +29,7 @@ type DigitalWalletToken struct {
 	Device *Device `json:"device,omitempty"`
 	// Digital wallet token's provisioning status.  For fulfillment status descriptions, see <</core-api/digital-wallets-management#postDigitalwallettokentransitions, Create digital wallet token transition>>.
 	FulfillmentStatus *string `json:"fulfillment_status,omitempty"`
-	// The Marqeta platform's decision as to whether the digital wallet token should be provisioned.  * *0000* – The token should be provisioned.  * *token.activation.verification.required* – Provisioning is pending; further action is required for completion.  For all other values, check the value of the `fulfillment_status` field to definitively ascertain the provisioning outcome.  *NOTE:* The value `invalid.cid` indicates an invalid CVV2 number.
+	// The Marqeta platform's decision as to whether the digital wallet token should be provisioned.  * *0000*  The token should be provisioned.  * *token.activation.verification.required*  Provisioning is pending; further action is required for completion.  For all other values, check the value of the `fulfillment_status` field to definitively ascertain the provisioning outcome.  *NOTE:* The value `invalid.cid` indicates an invalid CVV2 number.
 	IssuerEligibilityDecision *string `json:"issuer_eligibility_decision,omitempty"`
 	// Date and time when the digital wallet token object was last modified, in UTC.
 	LastModifiedTime *time.Time `json:"last_modified_time,omitempty"`

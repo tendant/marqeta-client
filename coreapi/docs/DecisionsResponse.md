@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **AdverseActionTemplateCode** | Pointer to **string** | Indicates the version of the Notice of Adverse Action (NOAA) template used. Can have these possible values:  * &#x60;AA0&#x60; - score denial with score disclosure * &#x60;AA1&#x60; - individual reason with score disclosure * &#x60;AA2&#x60; - individual reason without score disclosure * &#x60;AA3&#x60; - locked and frozen * &#x60;AA4&#x60; - fraud related | [optional] 
 **CardProductLevel** | Pointer to **string** | The tier of the card product. | [optional] 
 **CreatedDate** | Pointer to **time.Time** | Date and time when the decision model was created on the Marqeta platform, in UTC. | [optional] 
-**CreditBureau** | Pointer to [**CreditBureau**](CreditBureau.md) |  | [optional] 
 **CreditLimit** | Pointer to **int32** | The maximum line of credit extended to the user, also the maximum balance the credit account can carry. | [optional] 
 **CreditScore** | Pointer to **int32** | The user&#39;s credit score. | [optional] 
 **CreditScoreDate** | Pointer to **string** | Date and time when the credit score went into effect. | [optional] 
@@ -120,31 +119,6 @@ SetCreatedDate sets CreatedDate field to given value.
 `func (o *DecisionsResponse) HasCreatedDate() bool`
 
 HasCreatedDate returns a boolean if a field has been set.
-
-### GetCreditBureau
-
-`func (o *DecisionsResponse) GetCreditBureau() CreditBureau`
-
-GetCreditBureau returns the CreditBureau field if non-nil, zero value otherwise.
-
-### GetCreditBureauOk
-
-`func (o *DecisionsResponse) GetCreditBureauOk() (*CreditBureau, bool)`
-
-GetCreditBureauOk returns a tuple with the CreditBureau field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreditBureau
-
-`func (o *DecisionsResponse) SetCreditBureau(v CreditBureau)`
-
-SetCreditBureau sets CreditBureau field to given value.
-
-### HasCreditBureau
-
-`func (o *DecisionsResponse) HasCreditBureau() bool`
-
-HasCreditBureau returns a boolean if a field has been set.
 
 ### GetCreditLimit
 

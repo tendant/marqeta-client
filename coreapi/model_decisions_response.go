@@ -27,7 +27,6 @@ type DecisionsResponse struct {
 	CardProductLevel *string `json:"card_product_level,omitempty"`
 	// Date and time when the decision model was created on the Marqeta platform, in UTC.
 	CreatedDate *time.Time `json:"created_date,omitempty"`
-	CreditBureau *CreditBureau `json:"credit_bureau,omitempty"`
 	// The maximum line of credit extended to the user, also the maximum balance the credit account can carry.
 	CreditLimit *int32 `json:"credit_limit,omitempty"`
 	// The user's credit score.
@@ -183,38 +182,6 @@ func (o *DecisionsResponse) HasCreatedDate() bool {
 // SetCreatedDate gets a reference to the given time.Time and assigns it to the CreatedDate field.
 func (o *DecisionsResponse) SetCreatedDate(v time.Time) {
 	o.CreatedDate = &v
-}
-
-// GetCreditBureau returns the CreditBureau field value if set, zero value otherwise.
-func (o *DecisionsResponse) GetCreditBureau() CreditBureau {
-	if o == nil || IsNil(o.CreditBureau) {
-		var ret CreditBureau
-		return ret
-	}
-	return *o.CreditBureau
-}
-
-// GetCreditBureauOk returns a tuple with the CreditBureau field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *DecisionsResponse) GetCreditBureauOk() (*CreditBureau, bool) {
-	if o == nil || IsNil(o.CreditBureau) {
-		return nil, false
-	}
-	return o.CreditBureau, true
-}
-
-// HasCreditBureau returns a boolean if a field has been set.
-func (o *DecisionsResponse) HasCreditBureau() bool {
-	if o != nil && !IsNil(o.CreditBureau) {
-		return true
-	}
-
-	return false
-}
-
-// SetCreditBureau gets a reference to the given CreditBureau and assigns it to the CreditBureau field.
-func (o *DecisionsResponse) SetCreditBureau(v CreditBureau) {
-	o.CreditBureau = &v
 }
 
 // GetCreditLimit returns the CreditLimit field value if set, zero value otherwise.
@@ -763,9 +730,6 @@ func (o DecisionsResponse) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.CreatedDate) {
 		toSerialize["created_date"] = o.CreatedDate
-	}
-	if !IsNil(o.CreditBureau) {
-		toSerialize["credit_bureau"] = o.CreditBureau
 	}
 	if !IsNil(o.CreditLimit) {
 		toSerialize["credit_limit"] = o.CreditLimit

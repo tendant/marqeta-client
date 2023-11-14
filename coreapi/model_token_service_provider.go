@@ -34,7 +34,7 @@ type TokenServiceProvider struct {
 	TokenPan *string `json:"token_pan,omitempty"`
 	// Unique identifier of the digital wallet token within the card network.
 	TokenReferenceId *string `json:"token_reference_id,omitempty"`
-	// Unique numerical identifier of the token requestor within the card network. These ID numbers map to `token_requestor_name` field values as follows:  *Mastercard*  * 50110030273 – `APPLE_PAY` * 50120834693 – `ANDROID_PAY` * 50139059239 – `SAMSUNG_PAY`  *Visa*  * 40010030273 – `APPLE_PAY` * 40010075001 – `ANDROID_PAY` * 40010043095 – `SAMSUNG_PAY` * 40010075196 – `MICROSOFT_PAY` * 40010075338 – `VISA_CHECKOUT` * 40010075449 – `FACEBOOK` * 40010075839 – `NETFLIX` * 40010077056 – `FITBIT_PAY` * 40010069887 – `GARMIN_PAY`
+	// Unique numerical identifier of the token requestor within the card network. These ID numbers map to `token_requestor_name` field values as follows:  *Mastercard*  * 50110030273  `APPLE_PAY` * 50120834693  `ANDROID_PAY` * 50139059239  `SAMSUNG_PAY`  *Visa*  * 40010030273  `APPLE_PAY` * 40010075001  `ANDROID_PAY` * 40010043095  `SAMSUNG_PAY` * 40010075196  `MICROSOFT_PAY` * 40010075338  `VISA_CHECKOUT` * 40010075449  `FACEBOOK` * 40010075839  `NETFLIX` * 40010077056  `FITBIT_PAY` * 40010069887  `GARMIN_PAY`
 	TokenRequestorId *string `json:"token_requestor_id,omitempty"`
 	// Name of the token requestor within the card network.  *NOTE:* The list of example values for this field is maintained by the card networks and is subject to change.
 	TokenRequestorName *string `json:"token_requestor_name,omitempty"`

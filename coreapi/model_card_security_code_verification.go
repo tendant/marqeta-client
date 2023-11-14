@@ -21,7 +21,7 @@ var _ MappedNullable = &CardSecurityCodeVerification{}
 // CardSecurityCodeVerification Contains information about a verification check performed on the card's security code.
 type CardSecurityCodeVerification struct {
 	Response Response `json:"response"`
-	// Indicates the type of security code. Can have these possible values:  * *CVV1* – the security code stored in the magnetic stripe on the card. * *CVV2* – the security code printed on the card. * *ICVV* – the security code stored on the chip of the card. * *DCVV* – a dynamic security code used in some contactless payments when a card or device is tapped against the card reader.
+	// Indicates the type of security code. Can have these possible values:  * *CVV1*  the security code stored in the magnetic stripe on the card. * *CVV2*  the security code printed on the card. * *ICVV*  the security code stored on the chip of the card. * *DCVV*  a dynamic security code used in some contactless payments when a card or device is tapped against the card reader.
 	Type string `json:"type"`
 }
 

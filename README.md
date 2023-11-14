@@ -25,7 +25,7 @@ openapi-generator generate -g go -i CoreAPI.yaml -o marqeta-coreapi-go-client-v3
 or, using a config.json file
 
 ```shell
-openapi-generator generate -g go -i yaml/CoreAPI.yaml -o coreapi -c coreapi/config.json
+openapi-generator generate -g go -i yaml/CoreAPI.yaml -o coreapi -c config.json
 ```
 
 ### openapi-generator-cli
@@ -48,3 +48,6 @@ Link: https://github.com/go-swagger/go-swagger
 
 It does NOT work for OAS3.0
 
+## How to invoke mqtsvc
+
+See package `mqtsvc`.

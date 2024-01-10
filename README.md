@@ -2,6 +2,33 @@
 
 ## How to generate Go Client Code
 
+### fern
+
+Link: https://github.com/fern-api/fern?tab=readme-ov-file#starting-from-openapi
+
+Install:
+```shell
+npm install -g fern-api
+```
+
+Init:
+```shell
+fern init --openapi yaml/CoreAPI.yaml
+```
+
+which prints
+```
+? Login required. Continue? Yes
+Logged in!
+Created organization livefire-2015
+Created new API: ./fern
+```
+
+Generate:
+```shell
+fern generate
+```
+
 ### openapi-generator
 
 Link: https://openapi-generator.tech/docs/configuration/
